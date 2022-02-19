@@ -1,0 +1,109 @@
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+  
+body {
+    font-size: 20px;
+    font-weight: 300;
+    color:rgb(50,55,61);
+    background-color: rgb(238,245,251);
+    font-family: 'Montserrat', sans-serif;
+    text-transform: capitalize;
+}
+
+.temperature {
+    font-family: 'Rajdhani', sans-serif !important;
+    font-size: 22px;
+}
+.app-container {
+    background-color: rgb(238,245,251);
+    max-width: 650px;
+    margin:auto;
+  
+}
+.weather-container{
+    border: solid 4px white;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(199, 197, 197, 0.801);
+}
+
+//**** city ******
+
+.cities-container {
+display: flex;
+justify-content: space-evenly;    
+text-transform: uppercase;
+padding: 20px 0 20px 0
+}
+.city:hover{
+    font-weight: 600;
+    color:rgb(104,178,237);
+}
+.city.selected{
+    font-weight: 600;
+    color:rgb(104,178,237);
+
+}
+
+//*****today's weather*****
+
+.today-container {
+    min-height: 250px;
+    border-radius: 5px;
+    border-bottom: solid 4px white;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    font-size: 20px;
+    & .today{
+        padding: 40px 0 20px 0;
+    }
+    & .temperature {
+        font-size: 48px !important;
+        font-family: 'Rajdhani', sans-serif;
+       }
+}
+.today-weather {
+    display: flex;
+    height:90px
+}
+.todayIcon-container {
+    height:150px;
+    margin-right: 60px;
+}
+.todayIcon{
+    transform: scale(3);
+    margin-top: 30px;
+    margin-left:40px;
+ }
+
+ //******weather  forecast*****
+
+ 
+ .forecast {
+     display: flex;
+     max-width: 650px !important;
+     & .day {
+         font-size: 18px;
+        }
+}
+.forecastIcon{
+    transform: scale(1.85);
+}
+.forecast-container {
+    flex-grow: 100;
+    max-width: calc((650/4)px);
+    min-height: 175px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    align-items:center;
+    &:not(:last-child){
+    border-right: solid 4px white;
+    }
+}
